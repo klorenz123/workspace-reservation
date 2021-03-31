@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Registration Page</title>
+</head>
+<body style="background-color:#202020;color: white">
+	<div th:if="${param.error}" class="alert alert-danger">    
+    	Email is already exists.
+	</div>
+	<br>
+		<p align="center" class="display-4">Register</p>
+		<form action="#" th:action="@{/index/save}"
+		th:object="${clients}" method="POST">
+			<div align="center">
+				<input type="text" th:field="*{firstName}"
+					class="form-control mb-4 col-4" placeholder="First name">
+				
+				<input type="text" th:field="*{lastName}"
+					class="form-control mb-4 col-4" placeholder="Last name">
+					
+				<input type="text" th:field="*{contact}"
+				class="form-control mb-4 col-4" placeholder="Contact">
+		
+				<input type="text" th:field="*{email}"
+					class="form-control mb-4 col-4" placeholder="Email">
+					
+				<input type="text" th:field="*{password}"
+					class="form-control mb-4 col-4" placeholder="Password">
+					
+				
+				<button type="submit" class="btn btn-info col-2">Save</button>
+				
+			</div>
+		</form>
+		<div align="center">
+		<br>
+
+		<a th:href="@{/index}"
+				class="btn btn-info btn-sm col-2 mb-5">Back</a>
+		</div>
+</body>
+</html>

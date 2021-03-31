@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Rooms</title>
+</head>
+<body>
+
+	<div>
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		  <ul class="navbar-nav">
+		  	<li class="nav-item">
+		      <h3><span class="badge badge-dark">Workspace Reservation</span></h3>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" href="#"> </a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" th:href="@{/index/reservation}">Reservations</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" th:href="@{/index/reserved-rooms}">Reserved Rooms</a>
+		    </li>
+		    <li class="nav-item active">
+		      <a class="nav-link" th:href="@{/index/rooms}">Rooms</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" th:href="@{/index/accounts}">Accounts</a>
+		    </li>
+		    <ul class="navbar-right" style="position: absolute; right: 20px;">
+				<li class="nav-item active">
+			      <a class="nav-link" th:href="@{/index/accounts}">Logout</a>
+			    </li>
+		   </ul>
+		  </ul>
+		</nav>
+	</div>
+	
+	<br>
+	
+	<div class="container">
+	  <h2>Rooms</h2>
+	  <p th:text="'Date: ' + ${dateNow}"/>
+	  <button type="button" class="btn btn-success">Add Room</button>
+	  <p> </p>
+	  <table class="table table-hover table-striped table-bordered">
+	    <thead class="thead-dark">
+	      <tr>
+	      	<th>Id</th>
+	        <th>Room No.</th>
+	        <th>Room Type</th>
+	        <th>Price</th>
+	        <th>Status</th>
+	        <th>Action</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr>
+	        <td>1</td>
+	        <td>104</td>
+	        <td>King</td>
+	        <td>1000</td>
+	        <td>Available</td>
+	        <td>
+				<button type="button" class="btn btn-primary">Edit</button>
+				&nbsp
+				<button type="button" class="btn btn-danger">Delete</button>
+			</td>
+	      </tr>
+	       <tr>
+	        <td>2</td>
+	        <td>104</td>
+	        <td>King</td>
+	        <td>1000</td>
+	        <td>Available</td>
+	        <td>
+				<button type="button" class="btn btn-primary"> Edit </button>
+				&nbsp
+				<button type="button" class="btn btn-danger">Delete</button>
+			</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	</div>
+	
+	
+	
+</body>
+</html>
